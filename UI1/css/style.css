@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #303030 inset;
+}
+
+body {
+  background-color: rgb(54, 54, 54);
+  color: grey;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar nav ul {
+  list-style-type: none;
+}
+.sidebar nav {
+  position: fixed;
+  height: 85vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid grey;
+  padding: 20px 0px 0px 20px;
+  position: relative;
+}
+.sidebar nav .createPlaylist {
+  position: absolute;
+  bottom: 0;
+}
+.nav-items li {
+  padding: 5px 10px 5px 10px;
+  margin: 5px 10px 5px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  align-items: center;
+}
+.nav-items li:hover {
+  background-color: rgb(65, 100, 255);
+  color: white;
+}
+nav h4 {
+  color: white;
+}
+
+.mainBody {
+  position: absolute;
+  left: 17%;
+  top: 20px;
+  width: 80vw;
+}
+
+.headbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headbar input[type="text"] {
+  width: 70%;
+  background-color: rgb(54, 54, 54);
+  border: none;
+
+  font-size: 14px;
+  color: grey;
+}
+.headbar input[type="text"]:focus {
+  border: 3px solid #555;
+}
+a {
+  text-decoration: none;
+  color: grey;
+  font-size: 14px;
+}
+.exploreNew {
+  position: absolute;
+
+  top: 50px;
+  width: 80vw;
+  color: white;
+}
+
+.popularFeed {
+  position: absolute;
+  top: 280px;
+  width: 38vw;
+  color: white;
+}
+.card img {
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.card h1 {
+  font-size: 15px;
+}
+.card {
+  margin-top: 10px;
+}
+.elements {
+  display: flex;
+}
+.card img:hover {
+  box-shadow: 0 4px 8px 0 rgba(245, 245, 245, 0.2),
+    0 6px 20px 0 rgba(243, 243, 243, 0.19);
+}
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  align-self: center;
+}
+.player {
+  width: 100vw;
+  height: 15vh;
+  background-color: black;
+}
+.headbar .smscr {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: grey;
+  margin: 5px auto; /* 15% from the top and centered */
+  width: 1024px; /* Could be more or less, depending on screen size */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.container h2 {
+  color: #303030;
+  width: auto;
+  text-align: center;
+}
+.styler1 {
+  width: 25px;
+  background-color: #303030;
+  height: 40px;
+  position: absolute;
+  margin-top: -100px;
+}
+.playButton {
+  width: 50px;
+  height: 50px;
+  border: 5px grey solid;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 320px;
+  color: grey;
+  background-color: #303030;
+  position: absolute;
+  top: 245px;
+}
+.playButton:hover {
+  color: white;
+  cursor: pointer;
+}
+.inP {
+  width: 340px;
+  height: 60px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+}
+.uName {
+  background-color: #303030;
+  border: none;
+  color: #fff;
+  letter-spacing: 1.4px;
+}
+.pass {
+  background-color: #303030;
+  border: none;
+  border-top: 2px grey solid;
+  color: #fff;
+  letter-spacing: 1.4px;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/*Slick*/
+.slider {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.slick-slide {
+  margin: 0 5px;
+}
+.slick-list {
+  margin: 0px -5px 0px -5px;
+}
+button.slick-next,
+button.slick-next:hover {
+  position: absolute;
+  top: 41%;
+  right: 54px;
+  width: 37px;
+  height: 55px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 75px;
+}
+button.slick-prev,
+button.slick-prev:hover {
+  position: absolute;
+  top: 41%;
+  left: 15px;
+  z-index: 1;
+  width: 37px;
+  height: 55px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 75px;
+  background-position-x: right;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 70px;
+  color: #ea8496;
+  line-height: inherit;
+  font-weight: bold;
+}
+.slider img {
+  height: 324px;
+}
+
+/* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
+/* Slider */
+.slick-slider {
+  position: relative;
+
+  display: block;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff
+    url("http://maggiesadler.com/wp-content/uploads/2015/10/ajax-loader.gif")
+    center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot");
+  src: url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot?#iefix")
+      format("embedded-opentype"),
+    url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.woff")
+      format("woff"),
+    url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.ttf")
+      format("truetype"),
+    url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.svg#slick")
+      format("svg");
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+
+  opacity: 0.75;
+  color: white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+.slick-prev:before {
+  content: "";
+}
+[dir="rtl"] .slick-prev:before {
+  content: "";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+.slick-next:before {
+  content: "";
+}
+[dir="rtl"] .slick-next:before {
+  content: "";
+}
+
+/* Dots */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+.slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: "•";
+  text-align: center;
+
+  opacity: 0.25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .player {
+    margin-top: 85vh;
+  }
+  .sidebar nav {
+    display: none;
+  }
+  .mainBody {
+    left: 3%;
+    width: 95vw;
+  }
+  .exploreNew {
+    width: 95vw;
+  }
+  .headbar .smscr {
+    display: inline;
+  }
+  .inP {
+    width: 70vw;
+  }
+  .playButton {
+    margin-left: 67vw;
+  }
+  .modal-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 411px) {
+  .mainBody .headbar .smdn {
+    display: none;
+  }
+}

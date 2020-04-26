@@ -1,0 +1,55 @@
+<div class="sidebar">
+      <nav>
+        <div class="appl">
+        <h1 class="logo">Logo</h1>
+          <h4>
+            App
+          </h4>
+          <ul class="nav-items">
+            <li>
+              <i class="fas fa-fire"></i>
+              Explore
+            </li>
+            <li>
+              <i class="fas fa-bullhorn"></i>
+              Suggest
+            </li>
+            <li>
+              <i class="fas fa-chart-line"></i>
+              Top Charts
+            </li>
+            <li>
+              <i class="fas fa-music"></i>
+              New Stuff
+            </li>
+          </ul>
+        </div>
+        <div class="personall">
+          <h4>
+            Personal
+          </h4>
+          <ul class="nav-items">
+            <li>
+              <i class="fas fa-heart"></i>
+              Favorite
+            </li>
+            <li>
+              <i class="fas fa-cog"></i>
+              Albums
+            </li>
+            <li>
+              <i class="fas fa-stream"></i>
+              Playlists
+            </li>
+            <li>
+              <i class="fas fa-mask"></i>
+              Genres
+            </li>
+          </ul>
+        </div>
+        <div class="createPlaylist">
+          <i class="fas fa-plus"></i>
+          Create Playlist
+        </div>
+      </nav>
+    </div>

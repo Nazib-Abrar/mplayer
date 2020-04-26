@@ -1,0 +1,37 @@
+<div class="card">
+          <img src="./img/cover/artcell.jpg" />
+          <h1>Artcell</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/aurthohin.jpg" />
+          <h1>Aurthohin</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/nemesis.jpg" />
+          <h1>Nemesis</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/arbovirus.jpg" />
+          <h1>Arbovirus</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/shunno.jpg" />
+          <h1>Shunno</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/taalpatarshepai.jpg" />
+          <h1>Taalpatar Shepai</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/miles.jpg" />
+          <h1>Miles</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/conclusion.jpg" />
+          <h1>Conclusion</h1>
+        </div>
+        <div class="card">
+          <img src="./img/cover/jolergaan.jpg" />
+          <h1>Joler Gaan</h1>
+        </div>
+        
