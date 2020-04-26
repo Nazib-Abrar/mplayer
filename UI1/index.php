@@ -19,8 +19,7 @@
 		<div class="mainBody">
 		    <div class="headbar">
 		      <i class="fas fa-bars smscr"></i>
-		      <i class="smdn fas fa-chevron-left"></i>
-		      <i class="smdn fas fa-chevron-right"></i>
+		      
 		      <i class="fas fa-search"></i>
 		      <input class="searchbar" type="text" placeholder="Search Music" />
 		      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
