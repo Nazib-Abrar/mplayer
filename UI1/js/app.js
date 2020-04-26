@@ -55,3 +55,19 @@ window.onclick = function(event) {
   }
 }
 //alert("linked");
+
+const navSlide = () => {
+  const tButton = document.querySelector(".smscr");
+  const nav = document.querySelector(".sidebar nav");
+  const ttB = document.querySelector(".clse");
+
+  tButton.addEventListener("click", () => {
+    nav.classList.toggle("shownav");
+  });
+
+  ttB.addEventListener("click", () => {
+    nav.classList.toggle("shownav");
+  });
+};
+
+navSlide();
