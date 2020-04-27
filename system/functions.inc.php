@@ -48,6 +48,18 @@ file_insert($__mplayer["db_connection"], $__mplayer["db_song_table"], "lol", "lo
   PRIMARY KEY(id)
 )
 
+CREATE TABLE `gan_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_band` varchar(50),
+  `s_name` varchar(50),
+  `s_album` varchar(50),
+  `s_path` varchar(500),
+  `s_hit_count` int(11) ,
+  `s_cover` varchar(100),
+  PRIMARY KEY(id)
+)
+
+
 }
 
 
