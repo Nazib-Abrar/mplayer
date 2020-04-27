@@ -17,14 +17,14 @@
 		echo file_get_contents('./controls/sidebar.txt');
     ?>
 		<div class="mainBody">
-		    <div class="headbar">
-		      <i class="fas fa-bars smscr"></i>
-		      
-		      <i class="fas fa-search"></i>
-		      <input class="searchbar" type="text" placeholder="Search Music" />
-		      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
-		      <i class="fas fa-ellipsis-v"></i>
-		    </div>
+    <div class="headbar">
+      <i class="fas fa-bars smscr"></i>
+      
+      <i class="fas fa-search"></i>
+      <input class="searchbar" type="text" placeholder="Search Music" />
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
 
 	   	<!-- The Modal -->
 		<div id="id01" class="modal">
@@ -73,5 +73,21 @@
 	      
 	    </div>
 	    
+	    <script>
+	        const navSlide = () => {
+  const tButton = document.querySelector(".smscr");
+  const nav = document.querySelector(".sidebar nav");
+  const ttB = document.querySelector(".clse");
+
+  tButton.addEventListener("click", () => {
+    nav.classList.toggle("shownav");
+  });
+
+  ttB.addEventListener("click", () => {
+    nav.classList.toggle("shownav");
+  });
+};
+navSlide();
+	    </script>
   </body>
 </html>
