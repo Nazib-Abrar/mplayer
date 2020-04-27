@@ -1,7 +1,7 @@
 <div class="sidebar">
       <nav>
         <div class="appl">
-        <h1 class="logo">Logo</h1>
+        <h1 class="logo">Logo<div class="clse">&times</div></h1>
           <h4>
             App
           </h4>
