@@ -29,14 +29,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `gan_list` (
-  `s_id` int(11) NOT NULL,
-  `s_band` varchar(50) NOT NULL,
-  `s_name` varchar(50) NOT NULL,
-  `s_album` varchar(50) NOT NULL,
-  `s_path` varchar(500) NOT NULL,
-  `s_hit_count` int(11) NOT NULL,
-  `s_cover` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_band` varchar(50),
+  `s_name` varchar(50),
+  `s_album` varchar(50),
+  `s_path` varchar(500),
+  `s_hit_count` int(11) ,
+  `s_cover` varchar(100),
+  PRIMARY KEY(id)
+)
 
 -- --------------------------------------------------------
 
@@ -45,17 +46,17 @@ CREATE TABLE `gan_list` (
 --
 
 CREATE TABLE `user_data` (
-  `usr_id` int(11) NOT NULL,
-  `usr_firstname` text NOT NULL,
-  `usr_lastname` text NOT NULL,
-  `usr_email` varchar(50) NOT NULL,
-  `usr_password` varchar(50) NOT NULL,
-  `usr_favorite` varchar(30) NOT NULL,
-  `usr_albums` varchar(30) NOT NULL,
-  `usr_playlists` varchar(30) NOT NULL,
-  `usr_genres` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usr_firstname` text,
+  `usr_lastname` text ,
+  `usr_email` varchar(50) ,
+  `usr_password` varchar(50) ,
+  `usr_favorite` varchar(30) ,
+  `usr_albums` varchar(30) ,
+  `usr_playlists` varchar(30) ,
+  `usr_genres` varchar(30),
+    PRIMARY KEY(id)
+)
 --
 -- Indexes for dumped tables
 --
