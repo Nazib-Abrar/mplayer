@@ -6,6 +6,8 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
    
     
 <!-- Optional JavaScript -->
