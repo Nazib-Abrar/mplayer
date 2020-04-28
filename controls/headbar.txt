@@ -1,0 +1,12 @@
+<div class="headbar">
+      <i class="fas fa-bars smscr"></i>
+      
+      
+      <div class="containersbar">
+        <i class="fas fa-search"></i><span></span>
+        <input class="searchbar" type="text" placeholder="Search Music" />
+      </div>
+      <div class="space"></div>
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>

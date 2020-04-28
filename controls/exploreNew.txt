@@ -1,6 +1,6 @@
 <div class="card">
-          <img src="./img/cover/artcell.jpg" />
-          <h1>Artcell</h1>
+          <a href="bandHome.php"><img src="./img/cover/artcell.jpg" />
+          <h1>Artcell</h1></a>
         </div>
         <div class="card">
           <img src="./img/cover/aurthohin.jpg" />
