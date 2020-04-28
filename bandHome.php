@@ -18,7 +18,7 @@
     ?>
 		<div class="mainBody">
 		<?php
-		echo file_get_contents('./controls/headbar.txt');
+		echo file_get_contents('./controls/headbar.php');
     ?>
 
 	<?php

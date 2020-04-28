@@ -9,18 +9,22 @@ function key_generator($input){
 }
 
 #echo key_generator(1);
+function file_name($db_connection, $table){
+  $key = last_id($db_connection, $table) +1;
+  $key = key_generator($key);
+  return $key;
 
-function file_insert($db_connection, $table, $band_name, $song_name)
+}
+
+function file_insert($db_connection, $table, $song_name, $band_name, $album, $file_key)
 {
-    $key = last_id($db_connection, $table) +1;
-    $key = key_generator($key);
-    $file_path = "songs/".$key.".mp3";
+
     $query ="INSERT INTO `".$table."` (
        `s_band`, `s_name`, `s_album`, `s_path`, `s_hit_count`, `s_cover`
       ) VALUES (
-        '".$band_name."', '".$song_name."', '', '".$file_path."', '0', './img/cover/".$band_name."'
+        '".$band_name."', '".$song_name."', '".$album."', '".$file_key."', '0', './img/cover/".$band_name."'
       )";
-      echo $query;
+    mysqli_query($db_connection, $query);
 }
 
 
@@ -33,32 +37,10 @@ function last_id($db_connection, $table){
     return $result["id"];
 }
 
-file_insert($__mplayer["db_connection"], $__mplayer["db_song_table"], "lol", "lol");
-
-/*
-  CREATE DATABASE `mplayer`;
-  CREATE TABLE `gan_list` (
-  `s_id` int(11) NOT NULL AUTO_INCREMENT,
-  `s_band` varchar(50),
-  `s_name` varchar(50),
-  `s_album` varchar(50),
-  `s_path` varchar(500),
-  `s_hit_count` int(11) ,
-  `s_cover` varchar(100),
-  PRIMARY KEY(id)
-)
-
-CREATE TABLE `gan_list` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `s_band` varchar(50),
-  `s_name` varchar(50),
-  `s_album` varchar(50),
-  `s_path` varchar(500),
-  `s_hit_count` int(11) ,
-  `s_cover` varchar(100),
-  PRIMARY KEY(id)
-)
-
+function search($db_connection, $table, $param){
+  $query = "SELECT * from `".$table."` WHERE `s_name` LIKE '%".$param."%'";
+  $result = mysqli_query($db_connection, $query);
+  return $result;
 
 }
 
