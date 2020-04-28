@@ -14,11 +14,11 @@ input:-webkit-autofill {
 }
 
 body {
-  background-color: rgb(54, 54, 54);
-  color: grey;
+  background-color: #2f3136;
+  color: #77777d;
   height: 100%;
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -30,19 +30,22 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: grey;
 }
-
+.sidebar {
+  position: fixed;
+  z-index: 99;
+}
 .sidebar nav ul {
   list-style-type: none;
 }
 .sidebar nav {
-  position: fixed;
-  height: 85vh;
+  height: 100vh;
   width: 15vw;
   display: flex;
   flex-direction: column;
   border-right: 2px solid grey;
   padding: 20px 0px 0px 20px;
-  position: relative;
+  position: absolute;
+  margin-top: 0px;
 }
 .sidebar nav .createPlaylist {
   position: absolute;
@@ -68,28 +71,53 @@ nav h4 {
   left: 17%;
   top: 20px;
   width: 80vw;
-}
-
-.headbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+.headbar .containersbar {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
+.headbar .containersbar span {
+  width: 10px;
+}
+.headbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headbar .containersbar i {
+  justify-self: center;
+  align-self: center;
+}
 .headbar input[type="text"] {
-  width: 70%;
-  background-color: rgb(54, 54, 54);
+  width: 50vw;
+  background-color: #35383e;
   border: none;
-
+  padding: 5px 5px 5px 15px;
   font-size: 14px;
-  color: grey;
+  color: #77777d;
+  border-radius: 20px;
 }
 .headbar input[type="text"]:focus {
   border: 3px solid #555;
+}
+.headbar .space {
+  display: flex;
+  flex: 1;
 }
 a {
   text-decoration: none;
   color: grey;
   font-size: 14px;
+}
+.headbar a {
+  margin-top: -5px;
+  text-decoration: none;
+  color: grey;
+  font-size: 14px;
+  margin-right: 10px;
 }
 .exploreNew {
   position: absolute;
@@ -138,6 +166,8 @@ a {
   width: 100vw;
   height: 15vh;
   background-color: black;
+  position: relative;
+  margin-top: 85vh;
 }
 .headbar .smscr {
   display: none;
@@ -156,6 +186,87 @@ a {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
+}
+
+.desc {
+  color: #77777d;
+  width: 50vw;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+.postfix {
+  font-size: 14px;
+  color: #77777d;
+}
+.bandcover {
+  top: 90px;
+  width: 80vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.bandart {
+  margin-left: 55vw;
+  margin-top: 10vh;
+  position: absolute;
+  z-index: 2;
+  display: block;
+}
+.bandart img {
+  border-radius: 10px;
+}
+.bandart button {
+  padding: 10px 10px 10px 10px;
+  background-color: transparent;
+  border: 1px #77777d solid;
+  font-size: 15px;
+  color: #77777d;
+  font-family: "Poppins", sans-serif;
+  width: 300px;
+  border-radius: 10px;
+}
+.bandart button:hover {
+  background-color: #494c54;
+  color: #cbcbd4;
+}
+.songList {
+  position: relative;
+  padding-top: 50px;
+  width: auto;
+}
+.songList h2 {
+  color: white;
+  width: 50vw;
+  border: none;
+  border-bottom: 2px #cbcbd4 solid;
+}
+.songList ul {
+  list-style-type: none;
+}
+.songList ul li {
+  padding: 10px 20px 10px 20px;
+  margin-top: 5px;
+  width: 50vw;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 1px #77777d solid;
+  display: flex;
+}
+.songList ul li .songName {
+  flex: 1;
+}
+.songList ul li i {
+  padding: 0px 20px 0px 20px;
+  font-size: 14px;
+}
+.songList ul li i:hover {
+  font-size: 18px;
+  transition: font-size 0.2s ease;
+}
+.songList ul li:hover {
+  background-color: #494c54;
+  color: #cbcbd4;
 }
 
 /* Modal Content/Box */
@@ -611,7 +722,7 @@ button.slick-prev:hover {
   .sidebar nav {
     display: block;
     margin-left: -100vw;
-
+    height: 100vh;
     z-index: -1;
   }
   .mainBody {
@@ -624,6 +735,11 @@ button.slick-prev:hover {
   .headbar .smscr {
     display: inline;
     cursor: pointer;
+    margin-right: 15px;
+  }
+
+  .headbar .containersbar input[type="text"] {
+    width: 65vw;
   }
   .inP {
     width: 70vw;
@@ -657,6 +773,7 @@ button.slick-prev:hover {
 
   .sidebar .shownav {
     width: 80vw;
+    height: 100vh;
     z-index: 99;
     background-color: rgb(54, 54, 54);
   }
@@ -664,5 +781,32 @@ button.slick-prev:hover {
     position: absolute;
     display: flex;
     left: 70vw;
+  }
+  .bandcover {
+    width: 100vw;
+  }
+  .headbar {
+    width: 95vw;
+  }
+  .desc {
+    width: 95vw;
+  }
+  .bandart {
+    margin-left: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .bandart img {
+    width: 95vw;
+    height: auto;
+  }
+  .bandart button {
+    width: 95vw;
+  }
+  .songList h2 {
+    width: 95vw;
+  }
+  .songList ul li {
+    width: 95vw;
   }
 }
