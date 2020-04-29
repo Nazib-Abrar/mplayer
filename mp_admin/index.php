@@ -30,17 +30,17 @@ if(isset($_POST["song_name"]) && isset($_POST["band_name"]) && isset($_POST["alb
       }
     }
     else{
-      echo "an error occured";
+      echo "an error occured (error code not 0)";
     }
   }
   else {
-    echo "prohibited file type";
+    echo "prohibited file type (extention not allowed)";
   }
 
 
 }
 else{
-  echo "something went wrong";
+  echo "file not uploaded yet or any field is empty";
 }
 
 
