@@ -25,3 +25,16 @@ window.onclick = function(event) {
 };
 navSlide();
 	    </script>
+
+      <script>
+      const form = document.getElementById('searchbar');
+      const sr = document.getElementById('search_result');
+
+form.addEventListener('focusin', () => {
+  sr.style.display = "block";    
+});
+
+form.addEventListener('focusout', () => {
+  sr.style.display = "none";    
+});
+      </script>

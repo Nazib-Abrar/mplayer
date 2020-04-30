@@ -9,6 +9,8 @@ $res = search($__mplayer["db_connection"], $__mplayer["db_song_table"], $q);
 //print_r($res);
 $i=-1;
 
+
+echo "<ul>";
 while($row = mysqli_fetch_array($res))
 {
     $i++;
@@ -16,9 +18,9 @@ while($row = mysqli_fetch_array($res))
     $var[$i]['s_name']=$row['s_name'];
     $var[$i]['s_band']=$row['s_band'];
     //$SubjectCode[$i]['SubLongName']=$row['SubLongName'];
-    echo $var[$i]['s_name']." - ".$var[$i]['s_band']."<br>";
+    echo "<li class=\"slists\">"."<img src=\"./img/testing1.jpg\" height=\"20px\" width=\"20px\" />".$var[$i]['s_name']." - ".$var[$i]['s_band']."</li>";
 }
-
+echo "</ul>";
 }
 
 

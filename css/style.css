@@ -127,9 +127,36 @@ a {
   color: white;
 }
 
+/*Searchbar*/
+
+.sresults ul {
+  list-style-type: none;
+}
+.sresults ul .slists {
+  padding: 10px 10px 10px 10px;
+  width: 49vw;
+  margin-left: 2vw;
+}
+.sresults ul .slists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+#search_result ul .slists:hover {
+  background-color: grey;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+}
+.sresults ul .hidesearch {
+  display: none;
+}
+
 .popularFeed {
-  position: absolute;
-  top: 280px;
+  position: relative;
+  top: 20px;
   width: 38vw;
   color: white;
 }
