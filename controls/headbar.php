@@ -6,8 +6,16 @@
         <i class="fas fa-search"></i><span></span>
         <input class="searchbar" type="text" placeholder="Search Music" id = "searchbar"/>
       </div>
-      <div id="search_result">
-      </div>
+      
+
+      <div class="space"></div>
+      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+
+
+    <div id="search_result" class="sresults">
+      
         <script>
         $("#searchbar").keyup(function(event){
           //$("#search_result").text($(this).val());
@@ -20,9 +28,4 @@
         $("#search_result").draggable();
 
 
-        </script>
-
-      <div class="space"></div>
-      <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
-      <i class="fas fa-ellipsis-v"></i>
-    </div>
+        </script></div>
