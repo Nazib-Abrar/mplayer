@@ -27,14 +27,24 @@ navSlide();
 	    </script>
 
       <script>
-      const form = document.getElementById('searchbar');
+      
+document.addEventListener('click', function(evt){
+  const form = document.getElementById('searchbar');
       const sr = document.getElementById('search_result');
-
-form.addEventListener('focusin', () => {
-  sr.style.display = "block";    
+      const cl = document.querySelector('.slists');
+      const cncl = document.querySelector('.cnclbtn');
+  var targetElement = evt.target;
+      if (targetElement == sr || targetElement == form || targetElement == cl){
+          sr.style.display = "block";
+          cncl.style.display = "block";
+      }
+      else {
+        sr.style.display = "none";    
+        cncl.style.display = "none";
+      }
+      
+  
 });
 
-form.addEventListener('focusout', () => {
-  sr.style.display = "none";    
-});
+
       </script>
