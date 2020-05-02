@@ -5,7 +5,7 @@ $q = $_GET["query"];
 //echo ;
 
 if(!empty($q)){
-$res = search($__mplayer["db_connection"], $__mplayer["db_song_table"], $q);
+$res = search_song($__mplayer["db_connection"], $__mplayer["db_song_table"], $q);
 //print_r($res);
 $i=-1;
 
@@ -17,8 +17,9 @@ while($row = mysqli_fetch_array($res))
 
     $var[$i]['s_name']=$row['s_name'];
     $var[$i]['s_band']=$row['s_band'];
+    $var[$i]['s_cover']=$row['s_cover'];
     //$SubjectCode[$i]['SubLongName']=$row['SubLongName'];
-    echo "<li class=\"slists\">"."<img src=\"./img/testing1.jpg\" height=\"20px\" width=\"20px\" />".$var[$i]['s_name']." - ".$var[$i]['s_band']."</li>";
+    echo "<li class=\"slists\"><img src=\"./img/cover/".$var[$i]['s_cover']."\" height=\"50px\" width=\"50px\" />".$var[$i]['s_name']." - ".$var[$i]['s_band']."</li>";
 }
 echo "</ul>";
 }
