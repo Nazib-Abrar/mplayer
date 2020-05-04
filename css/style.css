@@ -160,6 +160,9 @@ a {
   margin-left: 10px;
   padding: 5px;
   display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 #search_result ul .slists:hover {
   background-color: rgba(243, 243, 243, 0.2);
@@ -175,8 +178,7 @@ a {
   color: white;
 }
 .card img {
-  height: 120px;
-  width: 120px;
+  height: 22vh;
   overflow: hidden;
   border-radius: 5px;
 }

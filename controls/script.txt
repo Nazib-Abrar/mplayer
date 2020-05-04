@@ -31,10 +31,24 @@ navSlide();
 document.addEventListener('click', function(evt){
   const form = document.getElementById('searchbar');
       const sr = document.getElementById('search_result');
-      const cl = document.querySelector('.slists');
+      const cl = document.querySelectorAll('.slists');
       const cncl = document.querySelector('.cnclbtn');
   var targetElement = evt.target;
-      if (targetElement == sr || targetElement == form || targetElement == cl){
+  const clll = document.getElementById('clickable');
+  
+  $("#search_result ul li").click(function() {
+        sr.style.display = "block";
+          cncl.style.display = "block";
+          
+    });
+
+    cl.forEach((cl) => {
+  cl.addEventListener('click', () => {
+    sr.style.display = "block";
+          cncl.style.display = "block";
+  });
+});
+      if (targetElement == sr || targetElement == form || targetElement == cncl || targetElement == clll){
           sr.style.display = "block";
           cncl.style.display = "block";
       }
@@ -47,4 +61,21 @@ document.addEventListener('click', function(evt){
 });
 
 
+      </script>
+
+      <script>
+      var input = document.querySelector('.cnclbtn');
+var textarea = document.querySelector('#searchbar');
+
+input.addEventListener('click', function () {
+    textarea.value = '';
+    
+          //$("#search_result").text($(this).val());
+          var query = "./system/search.php?query=" + $(this).val();
+          $.get(query, function(data, status){
+            $("#search_result").html(data);
+
+          });
+        $("#search_result").draggable();
+}, false);
       </script>
