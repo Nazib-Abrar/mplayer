@@ -6,7 +6,7 @@
         <i class="fas fa-search"></i><span></span>
         <input class="searchbar" type="text" placeholder="Search Music" id = "searchbar"/>
       </div>
-      <div class="cnclbtn">Cancel</div>
+      <button class="cnclbtn">Cancel</button>
 
       <div class="space"></div>
       <a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
